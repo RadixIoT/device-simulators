@@ -29,7 +29,7 @@ spec:
           ports:
             - name: snmp
               containerPort: 161
-              protocol: TCP
+              protocol: UDP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
